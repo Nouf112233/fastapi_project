@@ -59,8 +59,8 @@ SECRET_KEY=`Your SECRET KEY here`
 
 # digrame
 
-![Diagram.drawio img](https://github.com/Nouf112233/w08d04/blob/main/Diagram.drawio.png)
+![Diagram.drawio img](https://github.com/Nouf112233/fastapi_project/blob/main/img/Diagram.drawio.png)
 
 # UML
 
-![umlw08d04 img](https://github.com/Nouf112233/w08d04/blob/main/umlw08d04.png)
+![umlw08d04 img](https://github.com/Nouf112233/fastapi_project/blob/main/img/umlw08d04.png)
