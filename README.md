@@ -1,7 +1,7 @@
 # About the project
 ## Social Media Website Backend
  
-  This is a backend for a social media website built in Express.
+  This is a backend for a social media website built in fastapi.
 
 # Installing Dependencies
 
