@@ -13,8 +13,8 @@ class Users(database.Base):
     username=Column(String,index=True)
     # role_id = Column(Integer, ForeignKey("roles.id"))
     # role=relationship("Roles", back_populates="users")
-    like=relationship("Likes", back_populates="users")
-    post=relationship("Posts", back_populates="users")
-    comment=relationship("Comments", back_populates="users")
+    likes=relationship("Likes", back_populates="users")
+    posts=relationship("Posts", back_populates="users")
+    comments=relationship("Comments", back_populates="users")
     
     

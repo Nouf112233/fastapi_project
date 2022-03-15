@@ -12,5 +12,5 @@ class Comments(database.Base):
     time=Column(Date,index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
     post_id = Column(Integer, ForeignKey("posts.id"))
-    user=relationship("Users", back_populates="comments")
-    post=relationship("Posts", back_populates="comments")
+    users=relationship("Users", back_populates="comments")
+    posts=relationship("Posts", back_populates="comments")

@@ -11,5 +11,5 @@ class Likes(database.Base):
     like=Column(Boolean,default=False, index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
     post_id = Column(Integer, ForeignKey("posts.id"))
-    user=relationship("Users", back_populates="likes")
-    post=relationship("Posts", back_populates="likes")
+    users=relationship("Users", back_populates="likes")
+    posts=relationship("Posts", back_populates="likes")

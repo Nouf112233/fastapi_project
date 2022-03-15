@@ -9,6 +9,11 @@ from schemas import posts,users
 import oauth2
 router = APIRouter(tags=["comments"], prefix="/comments")
 
+
 @router.post('/')
-def newComment(post_id:int,comment: s_comments.Comments ,current_user:users.Users = Depends(oauth2.get_current_user), db:session = Depends(get_db)):
-    return c_comments.create_comment(post_id,comment,current_user,db)
+def newComment(post_id:int,comment: s_comments.Comments , db:session = Depends(get_db),current_user:int = Depends(oauth2.get_current_user)):
+    return c_comments.create_comment(post_id,comment,db,current_user)
+
+@router.delete("/")
+def deleteComment(id:int,db:session=Depends(get_db),current_user:int = Depends(oauth2.get_current_user)):
+    return c_comments.delete_comment(id,db,current_user)

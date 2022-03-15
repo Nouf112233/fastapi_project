@@ -9,5 +9,5 @@ import oauth2
 router = APIRouter(tags=["likes"], prefix="/likes")
 
 @router.post('/')
-def newLike(post_id:int,current_user:users.Users = Depends(oauth2.get_current_user), db:session = Depends(get_db)):
+def newLike(post_id:int,current_user:int = Depends(oauth2.get_current_user), db:session = Depends(get_db)):
     return cLikes.create_like(post_id,current_user,db)
